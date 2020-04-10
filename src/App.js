@@ -32,7 +32,7 @@ class App extends React.Component {
 
 	//add function to add a new task to the list
 	addTodo =(e, task) => {
-		console.log(this.state.todoes)
+		console.log("addTodo 1", this.state.todoes)
 		e.preventDefault();
 
 		const newTodo = {
@@ -44,7 +44,7 @@ class App extends React.Component {
 		this.setState({
 			todoes: [...this.state.todoes, newTodo]
 		});
-		console.log(this.state.todoes)
+		console.log("addTodo 2", this.state.todoes)
 	};
 
 	// class methods to update state
@@ -80,7 +80,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<h2>Welcome to your Todo App!</h2>
-				{/* <TodoForm /> */}
+				<TodoForm />
 				<TodoList todoes={this.state.todoes}/>
 			</div>
 		);
